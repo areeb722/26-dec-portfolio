@@ -5,8 +5,9 @@ const experiences = [
   {
     role: "SEO Expert",
     company: "Mezzex Technology",
-    period: "Feb 2024 – Jul 2025",
+    period: "Feb 2024 – Present",
     location: "Remote",
+    type: "Full Time",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
     points: [
       "Managed SEO for multiple brands (Direct Care, Houszy, Astir Care & Spacebox Storage)",
@@ -21,6 +22,7 @@ const experiences = [
     company: "Apple Education & Immigration Consultancy",
     period: "Feb 2023 – Jan 2024",
     location: "Australia",
+    type: "Full Time",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
     points: [
       "Designed SEO campaigns integrating on-page optimization and content creation",
@@ -34,6 +36,7 @@ const experiences = [
     company: "Digital Dhanu Pvt. Ltd.",
     period: "Dec 2022 – Feb 2023",
     location: "Remote",
+    type: "Full Time",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop",
     points: [
       "Assisted in comprehensive SEO audits and keyword research for client websites",
@@ -112,6 +115,11 @@ const Experience = () => {
                     <MapPin className="h-4 w-4" />
                     {exp.location}
                   </span>
+                  {exp.type && (
+                    <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
+                      {exp.type}
+                    </span>
+                  )}
                 </div>
                 <ul className="space-y-2">
                   {exp.points.map((point, i) => (
