@@ -35,28 +35,28 @@ const youtubeProjects = [
 const socialProjects = [
   {
     name: "Arix Facts - Facebook",
-    description: "Facts & Knowledge Page on Facebook",
+    description: "Movie Facts | Film Secrets | Movie Updates",
     url: "https://www.facebook.com/ArixFacts",
     platform: "facebook" as const,
     gradient: "from-blue-600 to-blue-500",
     icon: Facebook,
     stats: [
-      { icon: Users, label: "Followers", value: "10K+" },
-      { icon: Heart, label: "Page Likes", value: "9.8K" },
-      { icon: Share2, label: "Avg. Reach", value: "25K/week" },
+      { icon: Users, label: "Followers", value: "19K" },
+      { icon: Heart, label: "Following", value: "0" },
+      { icon: Share2, label: "Role", value: "Digital Creator" },
     ],
   },
   {
     name: "Arix Facts - Instagram",
-    description: "Facts & Reels on Instagram",
+    description: "Your Daily Dose of Movie Facts & Film Secrets!",
     url: "https://www.instagram.com/arixfactsofficial/",
     platform: "instagram" as const,
     gradient: "from-purple-600 via-pink-500 to-orange-400",
     icon: Instagram,
     stats: [
-      { icon: Users, label: "Followers", value: "8.5K+" },
-      { icon: Heart, label: "Avg. Likes", value: "1.2K" },
-      { icon: MessageCircle, label: "Engagement", value: "4.5%" },
+      { icon: Users, label: "Followers", value: "822" },
+      { icon: Heart, label: "Posts", value: "121" },
+      { icon: MessageCircle, label: "Following", value: "4" },
     ],
   },
 ];
