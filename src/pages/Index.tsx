@@ -1,5 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
+import FloatingSocialIcons from "@/components/FloatingSocialIcons";
 import Hero from "@/components/Hero";
 import ToolsSection from "@/components/ToolsSection";
 import About from "@/components/About";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Sidebar />
       <MobileNav />
+      <FloatingSocialIcons />
       
       <main>
         <Hero />
