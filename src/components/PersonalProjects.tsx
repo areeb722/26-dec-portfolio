@@ -152,15 +152,6 @@ const PersonalProjects = () => {
         </div>
 
         {/* Social Media */}
-        <motion.h3
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="mb-6 flex items-center gap-2 font-display text-xl font-semibold"
-        >
-          <Share2 className="h-6 w-6 text-primary" />
-          Social Media Pages
-        </motion.h3>
         <div className="grid gap-8 md:grid-cols-2">
           {socialProjects.map((project, index) => (
             <motion.div
