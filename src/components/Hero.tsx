@@ -137,7 +137,7 @@ const Hero = () => {
               <motion.div
                 animate={{ scale: [1, 1.3, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="h-2.5 w-2.5 rounded-full bg-green-500"
+                className="h-2.5 w-2.5 rounded-full bg-primary"
               />
               <span className="text-xs font-medium text-foreground">Available</span>
             </motion.div>
