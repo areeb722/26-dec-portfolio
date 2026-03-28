@@ -1,54 +1,70 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Trophy } from "lucide-react";
+import { Trophy, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    category: "E-commerce SEO",
-    title: "Khushboo Collection",
-    description: "Increased brand visibility and customer reach through strategic On-page & Local SEO optimization. Implemented comprehensive keyword strategy and technical improvements.",
-    tags: ["SEO", "Local SEO", "E-commerce"],
-    stats: ["150% traffic increase", "Top 3 rankings"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
+    title: "Houszy",
+    description: "E-commerce Store",
+    url: "https://houszy.co.uk/",
+    favicon: "https://houszy.co.uk/cdn/shop/files/Houszy_Logo.png?v=1717523526&width=200",
+    color: "from-orange-400 to-amber-500",
+    category: "E-commerce",
   },
   {
-    category: "Healthcare Marketing",
-    title: "Prakriti's Dental Care",
-    description: "Optimized GMB & local SEO for a dental clinic in Pune, leading to consistent growth in appointment bookings through improved local search visibility.",
-    tags: ["GMB", "Local SEO", "Healthcare"],
-    stats: ["200% more bookings", "5-star GMB rating"],
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=400&fit=crop",
+    title: "Astir Care",
+    description: "Health & Beauty",
+    url: "https://astircare.co.uk/",
+    favicon: "https://astircare.co.uk/wp-content/uploads/2024/06/logo-astir-care-header.png",
+    color: "from-slate-400 to-slate-600",
+    category: "E-commerce",
   },
   {
-    category: "Web Development",
-    title: "Socialmadaari.com",
-    description: "Built an SEO tool-rich website using HTML, CSS & JavaScript, integrating multiple SEO utilities for digital marketers and SEO professionals.",
-    tags: ["Web Dev", "JavaScript", "SEO Tools"],
-    stats: ["10+ tools integrated", "2000+ users"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+    title: "Direct Care",
+    description: "Health & Beauty Shack",
+    url: "https://www.direct-care.co.uk/",
+    favicon: "https://www.direct-care.co.uk/wp-content/uploads/2023/01/cropped-logo-3.png",
+    color: "from-emerald-500 to-teal-600",
+    category: "Healthcare",
   },
   {
-    category: "Social Media Marketing",
-    title: "Inklore Tattoo",
-    description: "Managed paid ads & social campaigns for a tattoo studio, boosting online engagement and customer inquiries through targeted Meta and Google Ads.",
-    tags: ["Paid Ads", "Social Media", "Design"],
-    stats: ["300% engagement boost", "50+ new clients"],
-    image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&h=400&fit=crop",
+    title: "Spacebox Storage",
+    description: "Self Storage Solutions",
+    url: "https://www.spaceboxstorage.co.uk/",
+    favicon: "https://www.spaceboxstorage.co.uk/wp-content/uploads/2022/10/spacebox-logo-dark.svg",
+    color: "from-red-500 to-red-700",
+    category: "Storage",
   },
   {
-    category: "Multi-Brand SEO",
-    title: "Direct Care & Spacebox Storage",
-    description: "Executed comprehensive SEO strategies for multiple brands at Mezzex Technology, including technical audits, content optimization, and link building campaigns.",
-    tags: ["Technical SEO", "Content", "Analytics"],
-    stats: ["400% organic growth", "Top 10 keywords"],
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop",
+    title: "Comfort Diva",
+    description: "Cat-Themed Gifts",
+    url: "https://www.comfortdiva.com/",
+    favicon: "https://static.wixstatic.com/media/9b1e4a_2b22c5f2b2a44bb38b3a15acc29c2666~mv2.png/v1/fill/w_100,h_100/comfort-diva-logo.png",
+    color: "from-orange-500 to-yellow-500",
+    category: "E-commerce",
   },
   {
-    category: "Software Development",
-    title: "OSINT Tool Project",
-    description: "Created a Linux-based OSINT script for username footprint analysis as part of B.Tech final year project, demonstrating cybersecurity and programming skills.",
-    tags: ["Python", "Linux", "Cybersecurity"],
-    stats: ["Open source", "B.Tech Project"],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=400&fit=crop",
+    title: "Inklore Tattoos",
+    description: "Tattoo Studio",
+    url: "https://inkloretattoos.com/",
+    favicon: "https://inkloretattoos.com/wp-content/uploads/2023/10/cropped-Logo.png",
+    color: "from-yellow-500 to-amber-600",
+    category: "Services",
+  },
+  {
+    title: "Prakriti Dental",
+    description: "Dental Care Clinic",
+    url: "http://prakritidentalcare.in/",
+    favicon: "http://prakritidentalcare.in/wp-content/uploads/2022/09/cropped-Prakriti-logo.png",
+    color: "from-cyan-400 to-teal-500",
+    category: "Healthcare",
+  },
+  {
+    title: "Socialmadaari",
+    description: "SEO Tools Platform",
+    url: "https://socialmadaari.com/",
+    favicon: "",
+    color: "from-violet-500 to-purple-600",
+    category: "Web Dev",
   },
 ];
 
@@ -75,63 +91,84 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground">
-            Showcasing successful campaigns and development work
+            Websites & platforms I've built and optimized
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="mb-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* App Icon Grid */}
+        <div className="mb-16 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="glass-card overflow-hidden group"
+              transition={{ delay: index * 0.08, type: "spring", stiffness: 200 }}
+              whileHover={{ scale: 1.05, y: -8 }}
+              className="group relative"
             >
-              <div className="relative h-40 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-primary/20 px-3 py-1 text-xs text-primary backdrop-blur-sm">
+              {/* Animated border wrapper */}
+              <div className="absolute -inset-[1px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden">
+                <div className="absolute inset-0 rounded-2xl animate-border-spin bg-[conic-gradient(from_0deg,transparent_0%,hsl(var(--primary))_25%,transparent_50%,hsl(var(--primary))_75%,transparent_100%)]" />
+              </div>
+              
+              {/* Glow effect on hover */}
+              <div className="absolute -inset-2 rounded-3xl bg-primary/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
+
+              {/* Card content */}
+              <div className="relative flex flex-col items-center gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-5 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-card">
+                {/* App icon */}
+                <div className={`relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${project.color} p-0.5 shadow-lg`}>
+                  <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-background/90 overflow-hidden">
+                    {project.favicon ? (
+                      <img
+                        src={project.favicon}
+                        alt={project.title}
+                        className="h-10 w-10 object-contain"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                          (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                    ) : null}
+                    <span className={`font-display text-lg font-bold bg-gradient-to-br ${project.color} bg-clip-text text-transparent ${project.favicon ? 'hidden' : ''}`}>
+                      {project.title.charAt(0)}
+                    </span>
+                  </div>
+                  
+                  {/* Pulse ring */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-30 group-hover:animate-pulse transition-opacity" 
+                       style={{ backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }} />
+                </div>
+
+                {/* Title & description */}
+                <div className="text-center">
+                  <h3 className="font-display text-sm font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-1 justify-center">
+                    {project.title}
+                    <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </h3>
+                  <p className="mt-0.5 text-xs text-muted-foreground">{project.description}</p>
+                </div>
+
+                {/* Category badge */}
+                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">
                   {project.category}
                 </span>
-              </div>
-              <div className="p-5">
-                <h3 className="mb-2 font-display text-lg font-semibold text-foreground">
-                  {project.title}
-                </h3>
-                <p className="mb-4 text-sm text-muted-foreground line-clamp-3">
-                  {project.description}
-                </p>
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded bg-secondary px-2 py-0.5 text-xs text-secondary-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex flex-wrap gap-3 text-xs">
-                  {project.stats.map((stat) => (
-                    <span
-                      key={stat}
-                      className="flex items-center gap-1 text-primary"
-                    >
-                      <TrendingUp className="h-3 w-3" />
-                      {stat}
-                    </span>
-                  ))}
+
+                {/* Scan line effect */}
+                <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent group-hover:animate-pulse" />
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent group-hover:animate-pulse" />
+                    <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-primary/50 to-transparent group-hover:animate-pulse" />
+                    <div className="absolute top-0 bottom-0 right-0 w-px bg-gradient-to-b from-transparent via-primary/50 to-transparent group-hover:animate-pulse" />
+                  </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
