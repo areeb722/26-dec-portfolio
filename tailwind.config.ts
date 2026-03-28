@@ -111,6 +111,7 @@ export default {
         "scale-in": "scale-in 0.4s ease-out forwards",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         float: "float 3s ease-in-out infinite",
+        "border-spin": "border-spin 3s linear infinite",
       },
     },
   },
