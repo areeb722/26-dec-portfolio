@@ -22,23 +22,23 @@ const highlights = [
 
 const About = () => {
   return (
-    <section id="about" className="relative py-20 px-4 md:pl-20 bg-card/30">
+    <section id="about" className="relative py-16 sm:py-20 px-4 md:pl-20 bg-card/30">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Passionate about technology and digital growth
           </p>
         </motion.div>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -62,13 +62,13 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+            <p className="mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed text-muted-foreground">
               Full-Stack Digital Marketer with 2+ years in SEO, Paid Ads, Content Strategy & Web Development. 
               Skilled in on-page, off-page, and technical SEO, WordPress, and Google API integrations. 
               Proven track record of boosting visibility, traffic, and leads for startups, e-commerce, and service businesses.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {highlights.map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -76,14 +76,14 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex gap-4"
+                  className="flex gap-3 sm:gap-4"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                    <item.icon className="h-6 w-6 text-primary" />
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                    <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-display font-semibold">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <h3 className="mb-0.5 sm:mb-1 font-display text-sm sm:text-base font-semibold">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
                   </div>
                 </motion.div>
               ))}

@@ -40,38 +40,38 @@ const opportunities = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-20 px-4 md:pl-20 bg-card/30">
+    <section id="contact" className="relative py-16 sm:py-20 px-4 md:pl-20 bg-card/30">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Let's discuss your next project or opportunity
           </p>
         </motion.div>
 
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8"
+            className="glass-card p-5 sm:p-8"
           >
-            <h3 className="mb-6 font-display text-xl font-semibold text-foreground">
+            <h3 className="mb-4 sm:mb-6 font-display text-lg sm:text-xl font-semibold text-foreground">
               Contact Information
             </h3>
-            <p className="mb-8 text-muted-foreground">
+            <p className="mb-6 sm:mb-8 text-xs sm:text-base text-muted-foreground">
               Feel free to reach out for collaborations, SEO consultations, or just a friendly chat about digital marketing and web development!
             </p>
 
-            <div className="mb-8 space-y-4">
+            <div className="mb-6 sm:mb-8 space-y-3 sm:space-y-4">
               {contactInfo.map((item, index) => (
                 <motion.a
                   key={item.label}
@@ -83,20 +83,20 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-4 rounded-lg bg-secondary/50 p-4 transition-colors hover:bg-secondary"
+                  className="flex items-center gap-3 sm:gap-4 rounded-lg bg-secondary/50 p-3 sm:p-4 transition-colors hover:bg-secondary"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                    <item.icon className="h-5 w-5 text-primary" />
+                  <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-primary/10">
+                    <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{item.label}</p>
-                    <p className="font-medium text-foreground">{item.value}</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground">{item.label}</p>
+                    <p className="text-sm sm:text-base font-medium text-foreground truncate">{item.value}</p>
                   </div>
                 </motion.a>
               ))}
             </div>
 
-            <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+            <Button className="w-full bg-primary hover:bg-primary/90 text-xs sm:text-sm" size="sm" asChild>
               <a href="#" download>
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
@@ -109,19 +109,19 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8"
+            className="glass-card p-5 sm:p-8"
           >
-            <div className="mb-6 flex items-center gap-3">
-              <Rocket className="h-6 w-6 text-primary animate-float" />
-              <h3 className="font-display text-xl font-semibold text-foreground">
+            <div className="mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
+              <Rocket className="h-5 w-5 sm:h-6 sm:w-6 text-primary animate-float" />
+              <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground">
                 Available for Opportunities
               </h3>
             </div>
-            <p className="mb-8 text-muted-foreground">
+            <p className="mb-6 sm:mb-8 text-xs sm:text-base text-muted-foreground">
               I'm currently open to full-time positions, freelance projects, and consulting opportunities in:
             </p>
 
-            <div className="mb-8 grid gap-3 sm:grid-cols-2">
+            <div className="mb-6 sm:mb-8 grid gap-2 sm:gap-3 grid-cols-1 sm:grid-cols-2">
               {opportunities.map((item, index) => (
                 <motion.div
                   key={item}
@@ -129,17 +129,17 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-2 rounded-lg bg-secondary/50 p-3"
+                  className="flex items-center gap-2 rounded-lg bg-secondary/50 p-2.5 sm:p-3"
                 >
-                  <CheckCircle className="h-4 w-4 shrink-0 text-primary" />
-                  <span className="text-sm text-foreground">{item}</span>
+                  <CheckCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-primary" />
+                  <span className="text-xs sm:text-sm text-foreground">{item}</span>
                 </motion.div>
               ))}
             </div>
 
-            <div className="rounded-xl bg-gradient-to-r from-primary/10 to-purple-400/10 p-6 text-center">
-              <p className="text-sm text-muted-foreground">Response Time</p>
-              <p className="font-display text-lg font-semibold text-foreground">
+            <div className="rounded-xl bg-gradient-to-r from-primary/10 to-purple-400/10 p-4 sm:p-6 text-center">
+              <p className="text-xs sm:text-sm text-muted-foreground">Response Time</p>
+              <p className="font-display text-base sm:text-lg font-semibold text-foreground">
                 Usually within 24 hours
               </p>
             </div>
@@ -151,9 +151,9 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-12 sm:mt-16 text-center"
         >
-          <p className="text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             Built with ❤️ using React, TypeScript & Framer Motion
           </p>
         </motion.div>

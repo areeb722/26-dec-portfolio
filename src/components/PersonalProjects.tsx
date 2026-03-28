@@ -63,18 +63,18 @@ const socialProjects = [
 
 const PersonalProjects = () => {
   return (
-    <section id="personal-projects" className="relative py-20 px-4 md:pl-20">
+    <section id="personal-projects" className="relative py-16 sm:py-20 px-4 md:pl-20">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             Social Media <span className="gradient-text">Dashboard</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             My social media ventures and content creation analytics
           </p>
         </motion.div>
@@ -84,12 +84,12 @@ const PersonalProjects = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="mb-6 flex items-center gap-2 font-display text-xl font-semibold"
+          className="mb-4 sm:mb-6 flex items-center gap-2 font-display text-lg sm:text-xl font-semibold"
         >
-          <Youtube className="h-6 w-6 text-red-500" />
+          <Youtube className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
           YouTube Channels
         </motion.h3>
-        <div className="mb-12 grid gap-8 md:grid-cols-2">
+        <div className="mb-8 sm:mb-12 grid gap-6 sm:gap-8 md:grid-cols-2">
           {youtubeProjects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -99,42 +99,43 @@ const PersonalProjects = () => {
               transition={{ delay: index * 0.1 }}
               className="glass-card overflow-hidden group"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-36 sm:h-48 overflow-hidden">
                 <img
                   src={project.banner}
                   alt={`${project.name} banner`}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-red-600 px-3 py-1 text-xs font-bold text-white">
-                  <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
+                <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex items-center gap-1 rounded-full bg-red-600 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold text-white">
+                  <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-white animate-pulse" />
                   LIVE STATS
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="mb-2 font-display text-xl font-semibold text-primary">
+              <div className="p-4 sm:p-6">
+                <h3 className="mb-1.5 sm:mb-2 font-display text-lg sm:text-xl font-semibold text-primary">
                   {project.name}
                 </h3>
-                <p className="mb-4 text-sm text-muted-foreground">
+                <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-muted-foreground">
                   {project.description}
                 </p>
 
-                <div className="mb-4 grid grid-cols-2 gap-3">
+                <div className="mb-3 sm:mb-4 grid grid-cols-2 gap-2 sm:gap-3">
                   {project.stats.map((stat) => (
-                    <div key={stat.label} className="rounded-lg bg-secondary/50 p-3 text-center">
-                      <div className="mb-1 flex items-center justify-center">
-                        <stat.icon className="h-4 w-4 text-primary" />
+                    <div key={stat.label} className="rounded-lg bg-secondary/50 p-2 sm:p-3 text-center">
+                      <div className="mb-0.5 sm:mb-1 flex items-center justify-center">
+                        <stat.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                       </div>
-                      <p className="text-lg font-bold text-foreground">{stat.value}</p>
-                      <p className="text-xs text-muted-foreground">{stat.label}</p>
+                      <p className="text-sm sm:text-lg font-bold text-foreground">{stat.value}</p>
+                      <p className="text-[10px] sm:text-xs text-muted-foreground">{stat.label}</p>
                     </div>
                   ))}
                 </div>
 
                 <Button
                   asChild
-                  className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  size="sm"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm"
                 >
                   <a
                     href={project.url}
@@ -142,7 +143,7 @@ const PersonalProjects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"
                   >
-                    <Youtube className="h-5 w-5" />
+                    <Youtube className="h-4 w-4 sm:h-5 sm:w-5" />
                     Visit YouTube Channel
                   </a>
                 </Button>
@@ -152,7 +153,7 @@ const PersonalProjects = () => {
         </div>
 
         {/* Social Media */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
           {socialProjects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -163,37 +164,38 @@ const PersonalProjects = () => {
               className="glass-card overflow-hidden group"
             >
               {/* Gradient Header */}
-              <div className={`relative h-32 bg-gradient-to-r ${project.gradient} flex items-center justify-center`}>
-                <project.icon className="h-16 w-16 text-white/90" />
-                <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-xs font-bold text-white">
-                  <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
+              <div className={`relative h-24 sm:h-32 bg-gradient-to-r ${project.gradient} flex items-center justify-center`}>
+                <project.icon className="h-12 w-12 sm:h-16 sm:w-16 text-white/90" />
+                <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex items-center gap-1 rounded-full bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold text-white">
+                  <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-white animate-pulse" />
                   LIVE
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="mb-2 font-display text-xl font-semibold text-primary">
+              <div className="p-4 sm:p-6">
+                <h3 className="mb-1.5 sm:mb-2 font-display text-lg sm:text-xl font-semibold text-primary">
                   {project.name}
                 </h3>
-                <p className="mb-4 text-sm text-muted-foreground">
+                <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-muted-foreground">
                   {project.description}
                 </p>
 
-                <div className="mb-4 grid grid-cols-3 gap-3">
+                <div className="mb-3 sm:mb-4 grid grid-cols-3 gap-2 sm:gap-3">
                   {project.stats.map((stat) => (
-                    <div key={stat.label} className="rounded-lg bg-secondary/50 p-3 text-center">
-                      <div className="mb-1 flex items-center justify-center">
-                        <stat.icon className="h-4 w-4 text-primary" />
+                    <div key={stat.label} className="rounded-lg bg-secondary/50 p-2 sm:p-3 text-center">
+                      <div className="mb-0.5 sm:mb-1 flex items-center justify-center">
+                        <stat.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                       </div>
-                      <p className="text-lg font-bold text-foreground">{stat.value}</p>
-                      <p className="text-xs text-muted-foreground">{stat.label}</p>
+                      <p className="text-sm sm:text-lg font-bold text-foreground">{stat.value}</p>
+                      <p className="text-[10px] sm:text-xs text-muted-foreground">{stat.label}</p>
                     </div>
                   ))}
                 </div>
 
                 <Button
                   asChild
-                  className={`w-full bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white border-0`}
+                  size="sm"
+                  className={`w-full bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white border-0 text-xs sm:text-sm`}
                 >
                   <a
                     href={project.url}
@@ -201,7 +203,7 @@ const PersonalProjects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"
                   >
-                    <project.icon className="h-5 w-5" />
+                    <project.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                     Visit {project.platform === "facebook" ? "Facebook" : "Instagram"} Page
                   </a>
                 </Button>

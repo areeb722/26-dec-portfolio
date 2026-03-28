@@ -47,23 +47,23 @@ const additionalTools = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="relative py-20 px-4 md:pl-20">
+    <section id="skills" className="relative py-16 sm:py-20 px-4 md:pl-20">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             Skills & <span className="gradient-text">Expertise</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Comprehensive toolkit for digital success
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-4 sm:gap-8 md:grid-cols-2">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -71,12 +71,12 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1 }}
-              className="glass-card p-6"
+              className="glass-card p-4 sm:p-6"
             >
-              <h3 className="mb-6 font-display text-xl font-semibold text-primary">
+              <h3 className="mb-4 sm:mb-6 font-display text-lg sm:text-xl font-semibold text-primary">
                 {category.title}
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -85,11 +85,11 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
                   >
-                    <div className="mb-2 flex justify-between text-sm">
+                    <div className="mb-1.5 sm:mb-2 flex justify-between text-xs sm:text-sm">
                       <span className="text-foreground">{skill.name}</span>
                       <span className="text-primary">{skill.level}%</span>
                     </div>
-                    <div className="h-2 overflow-hidden rounded-full bg-muted">
+                    <div className="h-1.5 sm:h-2 overflow-hidden rounded-full bg-muted">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -110,12 +110,12 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12"
+          className="mt-8 sm:mt-12"
         >
-          <h3 className="mb-6 text-center font-display text-xl font-semibold">
+          <h3 className="mb-4 sm:mb-6 text-center font-display text-lg sm:text-xl font-semibold">
             Additional Tools & Technologies
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {additionalTools.map((tool, index) => (
               <motion.span
                 key={tool}
@@ -124,7 +124,7 @@ const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.05 }}
-                className="rounded-full bg-card border border-border px-4 py-2 text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-all"
+                className="rounded-full bg-card border border-border px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-all"
               >
                 {tool}
               </motion.span>
