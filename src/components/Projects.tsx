@@ -79,24 +79,24 @@ const certifications = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative py-20 px-4 md:pl-20">
+    <section id="projects" className="relative py-16 sm:py-20 px-4 md:pl-20">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Websites & platforms I've built and optimized
           </p>
         </motion.div>
 
         {/* App Icon Grid */}
-        <div className="mb-16 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mb-12 sm:mb-16 grid grid-cols-2 gap-3 sm:gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {projects.map((project, index) => (
             <motion.a
               key={project.title}
@@ -118,47 +118,42 @@ const Projects = () => {
               {/* Glow effect on hover */}
               <div className="absolute -inset-2 rounded-3xl bg-primary/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
 
-              {/* Card content */}
-              <div className="relative flex flex-col items-center gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-5 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-card">
+              <div className="relative flex flex-col items-center gap-2 sm:gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-3 sm:p-5 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-card">
                 {/* App icon */}
-                <div className={`relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${project.color} p-0.5 shadow-lg`}>
-                  <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-background/90 overflow-hidden">
+                <div className={`relative flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.color} p-0.5 shadow-lg`}>
+                  <div className="flex h-full w-full items-center justify-center rounded-[10px] sm:rounded-[14px] bg-background/90 overflow-hidden">
                     {project.favicon ? (
                       <img
                         src={project.favicon}
                         alt={project.title}
-                        className="h-10 w-10 object-contain"
+                        className="h-7 w-7 sm:h-10 sm:w-10 object-contain"
                         onError={(e) => {
                           (e.target as HTMLImageElement).style.display = 'none';
                           (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
                         }}
                       />
                     ) : null}
-                    <span className={`font-display text-lg font-bold bg-gradient-to-br ${project.color} bg-clip-text text-transparent ${project.favicon ? 'hidden' : ''}`}>
+                    <span className={`font-display text-base sm:text-lg font-bold bg-gradient-to-br ${project.color} bg-clip-text text-transparent ${project.favicon ? 'hidden' : ''}`}>
                       {project.title.charAt(0)}
                     </span>
                   </div>
                   
-                  {/* Pulse ring */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-30 group-hover:animate-pulse transition-opacity" 
+                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-30 group-hover:animate-pulse transition-opacity" 
                        style={{ backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }} />
                 </div>
 
-                {/* Title & description */}
                 <div className="text-center">
-                  <h3 className="font-display text-sm font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-1 justify-center">
+                  <h3 className="font-display text-xs sm:text-sm font-semibold text-foreground group-hover:text-primary transition-colors flex items-center gap-1 justify-center">
                     {project.title}
-                    <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ExternalLink className="h-2.5 w-2.5 sm:h-3 sm:w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
-                  <p className="mt-0.5 text-xs text-muted-foreground">{project.description}</p>
+                  <p className="mt-0.5 text-[10px] sm:text-xs text-muted-foreground line-clamp-1">{project.description}</p>
                 </div>
 
-                {/* Category badge */}
-                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">
+                <span className="rounded-full bg-primary/10 px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] font-medium text-primary">
                   {project.category}
                 </span>
 
-                {/* Scan line effect */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent group-hover:animate-pulse" />
@@ -178,10 +173,10 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="mb-8 text-center font-display text-2xl font-semibold">
+          <h3 className="mb-6 sm:mb-8 text-center font-display text-xl sm:text-2xl font-semibold">
             Certifications
           </h3>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert}
@@ -190,10 +185,10 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.02 }}
-                className="glass-card flex items-center gap-3 p-4 hover:border-primary/50 transition-all"
+                className="glass-card flex items-center gap-2 sm:gap-3 p-3 sm:p-4 hover:border-primary/50 transition-all"
               >
-                <Trophy className="h-5 w-5 shrink-0 text-yellow-500" />
-                <span className="text-sm text-foreground">{cert}</span>
+                <Trophy className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-yellow-500" />
+                <span className="text-xs sm:text-sm text-foreground">{cert}</span>
               </motion.div>
             ))}
           </div>

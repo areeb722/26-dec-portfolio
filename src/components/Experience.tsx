@@ -63,24 +63,24 @@ const education = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="relative py-20 px-4 md:pl-20 bg-card/30">
+    <section id="experience" className="relative py-16 sm:py-20 px-4 md:pl-20 bg-card/30">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             My professional journey in digital marketing
           </p>
         </motion.div>
 
         {/* Experience Cards */}
-        <div className="mb-16 space-y-8">
+        <div className="mb-12 sm:mb-16 space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.company}
@@ -90,7 +90,7 @@ const Experience = () => {
               transition={{ delay: index * 0.1 }}
               className="glass-card overflow-hidden"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-32 sm:h-48 overflow-hidden">
                 <img
                   src={exp.image}
                   alt={`${exp.company} banner`}
@@ -98,14 +98,14 @@ const Experience = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               </div>
-              <div className="p-6">
-                <h3 className="mb-1 font-display text-xl font-semibold text-primary">
+              <div className="p-4 sm:p-6">
+                <h3 className="mb-1 font-display text-lg sm:text-xl font-semibold text-primary">
                   {exp.role}
                 </h3>
-                <p className="mb-4 font-medium text-foreground">{exp.company}</p>
-                <div className="mb-4 flex flex-wrap gap-4 text-sm text-muted-foreground">
+                <p className="mb-3 sm:mb-4 text-sm sm:text-base font-medium text-foreground">{exp.company}</p>
+                <div className="mb-3 sm:mb-4 flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
+                    <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     {exp.period}
                   </span>
                   {exp.type && (
@@ -114,9 +114,9 @@ const Experience = () => {
                     </span>
                   )}
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-1.5 sm:space-y-2">
                   {exp.points.map((point, i) => (
-                    <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+                    <li key={i} className="flex gap-2 text-xs sm:text-sm text-muted-foreground">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                       {point}
                     </li>
@@ -133,10 +133,10 @@ const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="mb-8 text-center font-display text-2xl font-semibold">
+          <h3 className="mb-6 sm:mb-8 text-center font-display text-xl sm:text-2xl font-semibold">
             Education
           </h3>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
             {education.map((edu, index) => (
               <motion.div
                 key={edu.degree}
@@ -145,16 +145,16 @@ const Experience = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="glass-card p-6 text-center hover:border-primary/50 transition-all"
+                className="glass-card p-4 sm:p-6 text-center hover:border-primary/50 transition-all"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                  <span className="text-xl">🎓</span>
+                <div className="mb-3 sm:mb-4 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary/10">
+                  <span className="text-lg sm:text-xl">🎓</span>
                 </div>
-                <h4 className="mb-2 font-display font-semibold text-foreground">
+                <h4 className="mb-1.5 sm:mb-2 font-display text-sm sm:text-base font-semibold text-foreground">
                   {edu.degree}
                 </h4>
-                <p className="mb-2 text-sm text-muted-foreground">{edu.institution}</p>
-                <p className="text-sm text-primary">{edu.period}</p>
+                <p className="mb-1.5 sm:mb-2 text-xs sm:text-sm text-muted-foreground">{edu.institution}</p>
+                <p className="text-xs sm:text-sm text-primary">{edu.period}</p>
               </motion.div>
             ))}
           </div>
