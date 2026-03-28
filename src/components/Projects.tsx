@@ -79,24 +79,24 @@ const certifications = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative py-20 px-4 md:pl-20">
+    <section id="projects" className="relative py-16 sm:py-20 px-4 md:pl-20">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-8 sm:mb-12 text-center"
         >
-          <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+          <h2 className="mb-3 sm:mb-4 font-display text-2xl sm:text-3xl font-bold md:text-4xl">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Websites & platforms I've built and optimized
           </p>
         </motion.div>
 
         {/* App Icon Grid */}
-        <div className="mb-16 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mb-12 sm:mb-16 grid grid-cols-2 gap-3 sm:gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {projects.map((project, index) => (
             <motion.a
               key={project.title}
