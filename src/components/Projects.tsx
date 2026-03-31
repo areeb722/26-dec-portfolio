@@ -121,7 +121,7 @@ const Projects = () => {
               <div className="relative flex flex-col items-center gap-2 sm:gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-3 sm:p-5 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-card">
                 {/* App icon */}
                 <div className={`relative flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.color} p-0.5 shadow-lg`}>
-                  <div className="flex h-full w-full items-center justify-center rounded-[10px] sm:rounded-[14px] bg-background/90 overflow-hidden">
+                  <div className="flex h-full w-full items-center justify-center rounded-[10px] sm:rounded-[14px] bg-white overflow-hidden">
                     {project.favicon ? (
                       <img
                         src={project.favicon}
