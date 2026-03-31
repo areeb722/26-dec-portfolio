@@ -6,7 +6,7 @@ const projects = [
     title: "Houszy",
     description: "E-commerce Store",
     url: "https://houszy.co.uk/",
-    favicon: "https://houszy.co.uk/cdn/shop/files/Houszy_Logo.png?v=1717523526&width=200",
+    favicon: "https://www.google.com/s2/favicons?domain=houszy.co.uk&sz=128",
     color: "from-orange-400 to-amber-500",
     category: "E-commerce",
   },
@@ -14,7 +14,7 @@ const projects = [
     title: "Astir Care",
     description: "Health & Beauty",
     url: "https://astircare.co.uk/",
-    favicon: "https://astircare.co.uk/wp-content/uploads/2024/06/logo-astir-care-header.png",
+    favicon: "https://www.google.com/s2/favicons?domain=astircare.co.uk&sz=128",
     color: "from-slate-400 to-slate-600",
     category: "E-commerce",
   },
@@ -22,7 +22,7 @@ const projects = [
     title: "Direct Care",
     description: "Health & Beauty Shack",
     url: "https://www.direct-care.co.uk/",
-    favicon: "https://www.direct-care.co.uk/wp-content/uploads/2023/01/cropped-logo-3.png",
+    favicon: "https://www.google.com/s2/favicons?domain=direct-care.co.uk&sz=128",
     color: "from-emerald-500 to-teal-600",
     category: "Healthcare",
   },
@@ -30,7 +30,7 @@ const projects = [
     title: "Spacebox Storage",
     description: "Self Storage Solutions",
     url: "https://www.spaceboxstorage.co.uk/",
-    favicon: "https://www.spaceboxstorage.co.uk/wp-content/uploads/2022/10/spacebox-logo-dark.svg",
+    favicon: "https://www.google.com/s2/favicons?domain=spaceboxstorage.co.uk&sz=128",
     color: "from-red-500 to-red-700",
     category: "Storage",
   },
@@ -38,7 +38,7 @@ const projects = [
     title: "Comfort Diva",
     description: "Cat-Themed Gifts",
     url: "https://www.comfortdiva.com/",
-    favicon: "https://static.wixstatic.com/media/9b1e4a_2b22c5f2b2a44bb38b3a15acc29c2666~mv2.png/v1/fill/w_100,h_100/comfort-diva-logo.png",
+    favicon: "https://www.google.com/s2/favicons?domain=comfortdiva.com&sz=128",
     color: "from-orange-500 to-yellow-500",
     category: "E-commerce",
   },
@@ -46,7 +46,7 @@ const projects = [
     title: "Inklore Tattoos",
     description: "Tattoo Studio",
     url: "https://inkloretattoos.com/",
-    favicon: "https://inkloretattoos.com/wp-content/uploads/2023/10/cropped-Logo.png",
+    favicon: "https://www.google.com/s2/favicons?domain=inkloretattoos.com&sz=128",
     color: "from-yellow-500 to-amber-600",
     category: "Services",
   },
@@ -54,7 +54,7 @@ const projects = [
     title: "Prakriti Dental",
     description: "Dental Care Clinic",
     url: "http://prakritidentalcare.in/",
-    favicon: "http://prakritidentalcare.in/wp-content/uploads/2022/09/cropped-Prakriti-logo.png",
+    favicon: "https://www.google.com/s2/favicons?domain=prakritidentalcare.in&sz=128",
     color: "from-cyan-400 to-teal-500",
     category: "Healthcare",
   },
@@ -62,7 +62,7 @@ const projects = [
     title: "Socialmadaari",
     description: "SEO Tools Platform",
     url: "https://socialmadaari.com/",
-    favicon: "",
+    favicon: "https://www.google.com/s2/favicons?domain=socialmadaari.com&sz=128",
     color: "from-violet-500 to-purple-600",
     category: "Web Dev",
   },
@@ -121,7 +121,7 @@ const Projects = () => {
               <div className="relative flex flex-col items-center gap-2 sm:gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-3 sm:p-5 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-card">
                 {/* App icon */}
                 <div className={`relative flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.color} p-0.5 shadow-lg`}>
-                  <div className="flex h-full w-full items-center justify-center rounded-[10px] sm:rounded-[14px] bg-background/90 overflow-hidden">
+                  <div className="flex h-full w-full items-center justify-center rounded-[10px] sm:rounded-[14px] bg-white overflow-hidden">
                     {project.favicon ? (
                       <img
                         src={project.favicon}
