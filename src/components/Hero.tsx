@@ -91,13 +91,26 @@ const Hero = () => {
               }}
             />
 
-            {/* Tech corner brackets */}
-            <div className="absolute -inset-6 sm:-inset-8">
-              <div className="absolute top-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-primary/70 rounded-tl-lg" />
-              <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-primary/70 rounded-tr-lg" />
-              <div className="absolute bottom-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-primary/70 rounded-bl-lg" />
-              <div className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-primary/70 rounded-br-lg" />
-            </div>
+            {/* Rotating text circle */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-8 sm:-inset-10 md:-inset-12"
+            >
+              <svg viewBox="0 0 300 300" className="w-full h-full">
+                <defs>
+                  <path
+                    id="textCircle"
+                    d="M 150, 150 m -130, 0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0"
+                  />
+                </defs>
+                <text className="fill-primary/80" style={{ fontSize: "18px", fontFamily: "monospace", letterSpacing: "6px", fontWeight: 600 }}>
+                  <textPath href="#textCircle" startOffset="0%">
+                    SEO • CREATIVE • STRATEGY • SYSTEM • DESIGN • DEVELOPMENT • CODE •&nbsp;
+                  </textPath>
+                </text>
+              </svg>
+            </motion.div>
 
             {/* Pulsing glow ring */}
             <motion.div
