@@ -40,9 +40,9 @@ const Hero = () => {
             className="mb-4 sm:mb-5 inline-flex items-center gap-2.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md px-4 py-2"
           >
             <div className="flex items-center gap-1">
-              <span className="h-2 w-2 rounded-full bg-red-500/70" />
-              <span className="h-2 w-2 rounded-full bg-yellow-500/70" />
-              <span className="h-2 w-2 rounded-full bg-green-500/70" />
+              <span className="h-2 w-2 rounded-full bg-destructive/70" />
+              <span className="h-2 w-2 rounded-full bg-primary/50" />
+              <span className="h-2 w-2 rounded-full bg-accent/70" />
             </div>
             <Terminal className="h-3.5 w-3.5 text-primary" />
             <span className="font-mono text-xs sm:text-sm text-primary">
