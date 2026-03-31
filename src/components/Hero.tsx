@@ -95,7 +95,7 @@ const Hero = () => {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              className="absolute -inset-8 sm:-inset-10 md:-inset-12"
+              className="absolute -inset-6 sm:-inset-7 md:-inset-9"
             >
               <svg viewBox="0 0 300 300" className="w-full h-full">
                 <defs>
