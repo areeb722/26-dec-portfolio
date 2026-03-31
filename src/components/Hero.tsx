@@ -104,7 +104,7 @@ const Hero = () => {
                     d="M 150, 150 m -130, 0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0"
                   />
                 </defs>
-                <text className="fill-primary/80" style={{ fontSize: "18px", fontFamily: "monospace", letterSpacing: "6px", fontWeight: 600 }}>
+                <text className="fill-primary/80" style={{ fontSize: "16px", fontFamily: "monospace", letterSpacing: "4px", fontWeight: 600 }}>
                   <textPath href="#textCircle" startOffset="0%">
                     SEO • CREATIVE • STRATEGY • SYSTEM • DESIGN • DEVELOPMENT • CODE •&nbsp;
                   </textPath>
