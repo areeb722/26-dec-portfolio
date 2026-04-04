@@ -154,8 +154,7 @@ const Contact = () => {
           className="mt-12 sm:mt-16 text-center"
         >
           <p className="text-xs sm:text-sm text-muted-foreground">
-            Built with React, TypeScript & Framer Motion{" "}
-            <a href="https://x.com/dev_areeb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">@dev_areeb</a>
+            Built using React, TypeScript & Framer Motion
           </p>
         </motion.div>
       </div>
