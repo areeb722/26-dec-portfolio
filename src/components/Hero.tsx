@@ -6,9 +6,9 @@ import HeroProfileImage from "@/components/hero/HeroProfileImage";
 import profileImage from "@/assets/profile.png";
 
 const stats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "10+", label: "Projects Completed" },
-  { value: "5+", label: "Certifications" },
+  { value: "4+", label: "Years Experience" },
+  { value: "50+", label: "Projects Completed" },
+  { value: "10+", label: "Certifications" },
 ];
 
 const Hero = () => {
