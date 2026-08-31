@@ -63,9 +63,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p className="mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed text-muted-foreground">
-              Full-Stack Digital Marketer with 2+ years in SEO, Paid Ads, Content Strategy & Web Development. 
-              Skilled in on-page, off-page, and technical SEO, WordPress, and Google API integrations. 
-              Proven track record of boosting visibility, traffic, and leads for startups, e-commerce, and service businesses.
+              SEO Specialist with 3+ years driving organic growth for international B2C brands, ranking 300+ keywords and improving traffic 60–120% across projects. Independently built and scaled a content brand to 250K+ combined social following and 40M+ monthly views — bringing rare hands-on understanding of audience psychology, algorithm behavior, and content-driven growth to SEO strategy.
             </p>
 
             <div className="space-y-4 sm:space-y-6">
