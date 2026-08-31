@@ -66,6 +66,14 @@ const projects = [
     color: "from-violet-500 to-purple-600",
     category: "Web Dev",
   },
+  {
+    title: "Naman Darshan",
+    description: "Spiritual Brand Platform",
+    url: "https://namandarshan.com/",
+    favicon: "https://www.google.com/s2/favicons?domain=namandarshan.com&sz=128",
+    color: "from-orange-500 to-red-500",
+    category: "Spiritual",
+  },
 ];
 
 const certifications = [
