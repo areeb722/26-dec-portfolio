@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Youtube, Eye, Users, Clock, Facebook, Instagram, Heart, MessageCircle, Share2 } from "lucide-react";
 import { Button } from "./ui/button";
 import rukozaraBanner from "@/assets/rukozara-tv-banner.png";
-import arixYtBanner from "@/assets/arix-yt-banner.png.asset.json";
-import arixFbBanner from "@/assets/arix-fb-banner.png.asset.json";
+import arixYtBanner from "@/assets/arix-yt-banner.png";
+import arixFbBanner from "@/assets/arix-fb-banner.png";
 
 const youtubeProjects = [
   {
     name: "Arix Facts",
     description: "Movie Facts | Film Secrets | Movie Updates",
-    banner: arixYtBanner.url,
+    banner: arixYtBanner,
     url: "https://www.youtube.com/@ArixFacts",
     platform: "youtube" as const,
     stats: [
@@ -38,7 +38,7 @@ const socialProjects = [
     description: "Real Facts. Real Stories. Real Cinema.",
     url: "https://www.facebook.com/ArixFacts",
     platform: "facebook" as const,
-    banner: arixFbBanner.url,
+    banner: arixFbBanner,
     gradient: "from-blue-600 to-blue-500",
     icon: Facebook,
     stats: [
@@ -52,7 +52,7 @@ const socialProjects = [
     description: "Your Daily Dose of Movie Facts & Film Secrets!",
     url: "https://www.instagram.com/arixfactsofficial/",
     platform: "instagram" as const,
-    banner: arixYtBanner.url,
+    banner: arixYtBanner,
     gradient: "from-purple-600 via-pink-500 to-orange-400",
     icon: Instagram,
     stats: [
