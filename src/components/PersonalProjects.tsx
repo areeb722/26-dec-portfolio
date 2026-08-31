@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Youtube, Eye, Users, Clock, Facebook, Instagram, Heart, MessageCircle, Share2 } from "lucide-react";
 import { Button } from "./ui/button";
 import rukozaraBanner from "@/assets/rukozara-tv-banner.png";
-import arixFactsBanner from "@/assets/arix-facts-banner.png";
 import arixYtBanner from "@/assets/arix-yt-banner.png.asset.json";
 import arixFbBanner from "@/assets/arix-fb-banner.png.asset.json";
 
