@@ -6,6 +6,17 @@ import arixFactsBanner from "@/assets/arix-facts-banner.png";
 
 const youtubeProjects = [
   {
+    name: "Arix Facts",
+    description: "Movie Facts | Film Secrets | Movie Updates",
+    banner: arixFactsBanner,
+    url: "https://www.youtube.com/@ArixFacts",
+    platform: "youtube" as const,
+    stats: [
+      { icon: Users, label: "Subscribers", value: "16.7K" },
+      { icon: Eye, label: "Videos", value: "461" },
+    ],
+  },
+  {
     name: "Ruko Zara TV",
     description: "AI + Viral Real Moments + Reactions",
     banner: rukozaraBanner,
@@ -18,31 +29,19 @@ const youtubeProjects = [
       { icon: Eye, label: "Views (28d)", value: "7.8M" },
     ],
   },
-  {
-    name: "Arix Facts",
-    description: "Facts Jo Aapko Sochne Par Majboor Kare",
-    banner: arixFactsBanner,
-    url: "https://www.youtube.com/@ArixFacts",
-    platform: "youtube" as const,
-    stats: [
-      { icon: Eye, label: "Total Views", value: "500K+" },
-      { icon: Users, label: "Subscribers", value: "5,200+" },
-      { icon: Clock, label: "Watch Time", value: "1.8K hrs" },
-    ],
-  },
 ];
 
 const socialProjects = [
   {
     name: "Arix Facts - Facebook",
-    description: "Movie Facts | Film Secrets | Movie Updates",
+    description: "Real Facts. Real Stories. Real Cinema.",
     url: "https://www.facebook.com/ArixFacts",
     platform: "facebook" as const,
     gradient: "from-blue-600 to-blue-500",
     icon: Facebook,
     stats: [
-      { icon: Users, label: "Followers", value: "19K" },
-      { icon: Heart, label: "Following", value: "0" },
+      { icon: Users, label: "Followers", value: "212K" },
+      { icon: Heart, label: "Following", value: "2" },
       { icon: Share2, label: "Role", value: "Digital Creator" },
     ],
   },
@@ -54,12 +53,13 @@ const socialProjects = [
     gradient: "from-purple-600 via-pink-500 to-orange-400",
     icon: Instagram,
     stats: [
-      { icon: Users, label: "Followers", value: "822" },
-      { icon: Heart, label: "Posts", value: "121" },
-      { icon: MessageCircle, label: "Following", value: "4" },
+      { icon: Users, label: "Followers", value: "34.9K" },
+      { icon: MessageCircle, label: "Following", value: "3" },
+      { icon: Share2, label: "Role", value: "Digital Creator" },
     ],
   },
 ];
+
 
 const PersonalProjects = () => {
   return (
