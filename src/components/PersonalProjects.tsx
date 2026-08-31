@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import { Youtube, Eye, Users, Clock, Facebook, Instagram, Heart, MessageCircle, Share2 } from "lucide-react";
 import { Button } from "./ui/button";
 import rukozaraBanner from "@/assets/rukozara-tv-banner.png";
-import arixFactsBanner from "@/assets/arix-facts-banner.png";
+import arixYtBanner from "@/assets/arix-yt-banner.png.asset.json";
+import arixFbBanner from "@/assets/arix-fb-banner.png.asset.json";
 
 const youtubeProjects = [
   {
     name: "Arix Facts",
     description: "Movie Facts | Film Secrets | Movie Updates",
-    banner: arixFactsBanner,
+    banner: arixYtBanner.url,
     url: "https://www.youtube.com/@ArixFacts",
     platform: "youtube" as const,
     stats: [
@@ -37,6 +38,7 @@ const socialProjects = [
     description: "Real Facts. Real Stories. Real Cinema.",
     url: "https://www.facebook.com/ArixFacts",
     platform: "facebook" as const,
+    banner: arixFbBanner.url,
     gradient: "from-blue-600 to-blue-500",
     icon: Facebook,
     stats: [
@@ -50,6 +52,7 @@ const socialProjects = [
     description: "Your Daily Dose of Movie Facts & Film Secrets!",
     url: "https://www.instagram.com/arixfactsofficial/",
     platform: "instagram" as const,
+    banner: arixYtBanner.url,
     gradient: "from-purple-600 via-pink-500 to-orange-400",
     icon: Instagram,
     stats: [
@@ -164,9 +167,17 @@ const PersonalProjects = () => {
               className="glass-card overflow-hidden group"
             >
               {/* Gradient Header */}
-              <div className={`relative h-24 sm:h-32 bg-gradient-to-r ${project.gradient} flex items-center justify-center`}>
-                <project.icon className="h-12 w-12 sm:h-16 sm:w-16 text-white/90" />
-                <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex items-center gap-1 rounded-full bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold text-white">
+              <div className="relative h-36 sm:h-48 overflow-hidden">
+                <img
+                  src={project.banner}
+                  alt={`${project.name} banner`}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className={`absolute top-2 sm:top-3 left-2 sm:left-3 rounded-lg bg-gradient-to-r ${project.gradient} p-1.5 sm:p-2`}>
+                  <project.icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                </div>
+                <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 flex items-center gap-1 rounded-full bg-black/40 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold text-white">
                   <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-white animate-pulse" />
                   LIVE
                 </div>
