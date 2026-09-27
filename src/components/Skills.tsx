@@ -2,48 +2,50 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "SEO Expertise",
+    title: "Technical SEO & AEO / GEO",
     skills: [
-      { name: "On-Page SEO", level: 95 },
-      { name: "Off-Page SEO", level: 90 },
-      { name: "Technical SEO", level: 92 },
-      { name: "Local SEO", level: 88 },
+      { name: "Technical SEO (crawl, index, redirects)", level: 94 },
+      { name: "Schema & Structured Data", level: 92 },
+      { name: "Core Web Vitals & Page Speed", level: 90 },
+      { name: "AEO / GEO (AI Search & Overviews)", level: 85 },
     ],
   },
   {
-    title: "Digital Marketing",
+    title: "On-Page, Off-Page & Local SEO",
     skills: [
-      { name: "Google Ads", level: 90 },
-      { name: "Meta Ads", level: 85 },
-      { name: "Analytics", level: 92 },
-      { name: "Content Strategy", level: 88 },
+      { name: "On-Page Optimization", level: 95 },
+      { name: "Off-Page & Link Building", level: 90 },
+      { name: "Local SEO & Google Business Profile", level: 92 },
+      { name: "Keyword Research & Intent Mapping", level: 94 },
     ],
   },
   {
-    title: "Web Development",
+    title: "Paid Ads & Analytics",
     skills: [
-      { name: "HTML/CSS/JS", level: 90 },
-      { name: "React", level: 85 },
-      { name: "WordPress", level: 92 },
-      { name: "PHP", level: 80 },
+      { name: "Google Ads (Search, Retargeting, Video)", level: 88 },
+      { name: "Meta Ads & Lead Generation", level: 86 },
+      { name: "GA4 & Search Console", level: 93 },
+      { name: "Google Tag Manager & Conversion Tracking", level: 88 },
     ],
   },
   {
-    title: "Tools & Tech",
+    title: "Web, Automation & AI",
     skills: [
-      { name: "Google Analytics", level: 95 },
-      { name: "SEMrush/Ahrefs", level: 90 },
-      { name: "GTM", level: 85 },
-      { name: "Screaming Frog", level: 88 },
+      { name: "WordPress (custom, plugins, speed)", level: 92 },
+      { name: "HTML / CSS / JavaScript", level: 85 },
+      { name: "Python Tooling & Automation", level: 80 },
+      { name: "AI-Native Builds & Vercel/GitHub Deploys", level: 90 },
     ],
   },
 ];
 
 const additionalTools = [
-  "ChatGPT", "Canva", "Adobe Suite", "DaVinci Resolve",
-  "Google Search Console", "Moz", "Ubersuggest", "SERanking",
-  "WordPress Plugins", "Google API",
+  "Ahrefs", "SEMrush", "Screaming Frog", "Google Search Console",
+  "GA4", "Google Tag Manager", "Moz", "Ubersuggest", "SERanking",
+  "ChatGPT & AI Tools", "Canva", "Photoshop", "CapCut", "Filmora",
+  "WordPress", "Wix", "Vercel", "GitHub",
 ];
+
 
 const Skills = () => {
   return (
