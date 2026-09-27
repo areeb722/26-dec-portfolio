@@ -151,7 +151,7 @@ const Hero = () => {
                 transition={{ delay: 0.7 + index * 0.1, type: "spring" }}
                 className="group relative text-center"
               >
-                <div className="font-display text-2xl sm:text-3xl font-bold text-primary md:text-4xl">
+                <div className="font-display text-xl sm:text-2xl font-bold text-primary md:text-3xl whitespace-nowrap">
                   {stat.value}
                 </div>
                 <div className="mt-1 text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider">
