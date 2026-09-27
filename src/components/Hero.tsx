@@ -157,10 +157,8 @@ const Hero = () => {
                 <div className="mt-1 text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider">
                   {stat.label}
                 </div>
-                {index < stats.length - 1 && (
-                  <div className="absolute -right-3 sm:-right-4 top-1/2 -translate-y-1/2 h-8 w-px bg-border/50" />
-                )}
               </motion.div>
+
             ))}
           </motion.div>
         </div>
