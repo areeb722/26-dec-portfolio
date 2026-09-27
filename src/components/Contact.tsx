@@ -97,11 +97,12 @@ const Contact = () => {
             </div>
 
             <Button className="w-full bg-primary hover:bg-primary/90 text-xs sm:text-sm" size="sm" asChild>
-              <a href="#" download>
+              <a href="/MD-Areeb-Ansari-CV-2026.pdf" download="MD-Areeb-Ansari-CV-2026.pdf">
                 <Download className="mr-2 h-4 w-4" />
-                Download Resume
+                Download Resume (PDF)
               </a>
             </Button>
+
           </motion.div>
 
           {/* Opportunities */}

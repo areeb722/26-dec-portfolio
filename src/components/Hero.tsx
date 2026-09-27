@@ -6,10 +6,12 @@ import HeroProfileImage from "@/components/hero/HeroProfileImage";
 import profileImage from "@/assets/profile.png";
 
 const stats = [
-  { value: "4+", label: "Years Experience" },
-  { value: "50+", label: "Projects Completed" },
-  { value: "10+", label: "Certifications" },
+  { value: "300+", label: "Keywords Ranked" },
+  { value: "60–120%", label: "Traffic Growth" },
+  { value: "250K+", label: "Audience Built" },
+  { value: "40M+", label: "Monthly Views" },
 ];
+
 
 const Hero = () => {
   return (
@@ -93,7 +95,7 @@ const Hero = () => {
             transition={{ delay: 0.45 }}
             className="mb-8 sm:mb-10 flex flex-wrap justify-center gap-2 md:justify-start"
           >
-            {["React", "TypeScript", "SEO", "Analytics", "Node.js"].map((tag, i) => (
+            {["Technical SEO", "AEO / GEO", "Core Web Vitals", "GA4 · GTM", "Google & Meta Ads", "WordPress"].map((tag, i) => (
               <motion.span
                 key={tag}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -126,19 +128,20 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="ghost" asChild className="text-muted-foreground hover:text-primary text-sm h-10 px-5">
-              <a href="#contact">
+              <a href="/MD-Areeb-Ansari-CV-2026.pdf" download="MD-Areeb-Ansari-CV-2026.pdf">
                 <Download className="mr-2 h-4 w-4" />
                 Resume
               </a>
             </Button>
           </motion.div>
 
+
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex justify-center gap-6 sm:gap-8 md:justify-start"
+            className="flex flex-wrap justify-center gap-x-6 gap-y-4 sm:gap-x-8 md:justify-start"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -148,16 +151,14 @@ const Hero = () => {
                 transition={{ delay: 0.7 + index * 0.1, type: "spring" }}
                 className="group relative text-center"
               >
-                <div className="font-display text-2xl sm:text-3xl font-bold text-primary md:text-4xl">
+                <div className="font-display text-xl sm:text-2xl font-bold text-primary md:text-3xl whitespace-nowrap">
                   {stat.value}
                 </div>
                 <div className="mt-1 text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider">
                   {stat.label}
                 </div>
-                {index < stats.length - 1 && (
-                  <div className="absolute -right-3 sm:-right-4 top-1/2 -translate-y-1/2 h-8 w-px bg-border/50" />
-                )}
               </motion.div>
+
             ))}
           </motion.div>
         </div>
