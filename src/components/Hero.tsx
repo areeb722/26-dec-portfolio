@@ -6,10 +6,12 @@ import HeroProfileImage from "@/components/hero/HeroProfileImage";
 import profileImage from "@/assets/profile.png";
 
 const stats = [
-  { value: "4+", label: "Years Experience" },
-  { value: "50+", label: "Projects Completed" },
-  { value: "10+", label: "Certifications" },
+  { value: "300+", label: "Keywords Ranked" },
+  { value: "60–120%", label: "Traffic Growth" },
+  { value: "250K+", label: "Audience Built" },
+  { value: "40M+", label: "Monthly Views" },
 ];
+
 
 const Hero = () => {
   return (
@@ -93,7 +95,7 @@ const Hero = () => {
             transition={{ delay: 0.45 }}
             className="mb-8 sm:mb-10 flex flex-wrap justify-center gap-2 md:justify-start"
           >
-            {["React", "TypeScript", "SEO", "Analytics", "Node.js"].map((tag, i) => (
+            {["Technical SEO", "AEO / GEO", "Core Web Vitals", "GA4 · GTM", "Google & Meta Ads", "WordPress"].map((tag, i) => (
               <motion.span
                 key={tag}
                 initial={{ opacity: 0, scale: 0.8 }}
