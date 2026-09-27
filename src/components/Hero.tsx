@@ -128,19 +128,20 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="ghost" asChild className="text-muted-foreground hover:text-primary text-sm h-10 px-5">
-              <a href="#contact">
+              <a href="/MD-Areeb-Ansari-CV-2026.pdf" download="MD-Areeb-Ansari-CV-2026.pdf">
                 <Download className="mr-2 h-4 w-4" />
                 Resume
               </a>
             </Button>
           </motion.div>
 
+
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex justify-center gap-6 sm:gap-8 md:justify-start"
+            className="flex flex-wrap justify-center gap-x-6 gap-y-4 sm:gap-x-8 md:justify-start"
           >
             {stats.map((stat, index) => (
               <motion.div
