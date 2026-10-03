@@ -130,3 +130,23 @@
 .progress-bar {
   animation: progress-fill 1.5s ease-out forwards;
 }
+
+/* Spotlight + 3D tilt cards */
+.spotlight {
+  position: relative;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+.spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), hsl(var(--primary) / 0.22), transparent 70%);
+  z-index: 1;
+}
+.spotlight:hover::after { opacity: 1; }

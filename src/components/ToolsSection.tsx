@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { spotlightMove, spotlightLeave } from "@/lib/spotlight";
 import { ExternalLink, Terminal, ShieldAlert, Search, Sparkles, Database } from "lucide-react";
 
 const tools = [
@@ -71,12 +72,13 @@ const ToolsSection = () => {
               href={tool.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="group glass-card flex flex-col p-4 sm:p-6 transition-all hover:border-primary/50 hover:glow-border"
+              onPointerMove={spotlightMove}
+              onPointerLeave={spotlightLeave}
+              className="spotlight group glass-card flex flex-col p-4 sm:p-6 hover:border-primary/50 hover:glow-border"
             >
               <div className="mb-3 flex items-start justify-between gap-2">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { spotlightMove, spotlightLeave } from "@/lib/spotlight";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { motion } from "framer-motion";
 import { Trophy, ExternalLink, TrendingUp, Wrench, Target } from "lucide-react";
 import {
@@ -258,7 +260,11 @@ const Projects = () => {
               {/* Glow effect on hover */}
               <div className="absolute -inset-2 rounded-3xl bg-primary/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
 
-              <div className="relative flex h-full flex-col items-center gap-2 sm:gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-3 sm:p-5 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-card">
+              <div
+                onPointerMove={spotlightMove}
+                onPointerLeave={spotlightLeave}
+                className="spotlight flex h-full flex-col items-center gap-2 sm:gap-3 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm p-3 sm:p-5 group-hover:border-primary/30 group-hover:bg-card"
+              >
                 {/* App icon */}
                 <div className={`relative flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.color} p-0.5 shadow-lg`}>
                   <div className="flex h-full w-full items-center justify-center rounded-[10px] sm:rounded-[14px] bg-white overflow-hidden">
@@ -332,6 +338,7 @@ const Projects = () => {
                 </DialogHeader>
 
                 <div className="space-y-5">
+                  <BeforeAfterSlider before={[active.challenge]} after={active.results} />
                   <div>
                     <h4 className="mb-2 flex items-center gap-2 font-display text-sm font-semibold text-foreground">
                       <Wrench className="h-4 w-4 text-primary" />
