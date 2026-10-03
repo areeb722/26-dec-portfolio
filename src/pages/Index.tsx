@@ -2,6 +2,7 @@ import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 import FloatingSocialIcons from "@/components/FloatingSocialIcons";
 import SystemHud from "@/components/SystemHud";
+import SystemQuestPopup from "@/components/SystemQuestPopup";
 import Hero from "@/components/Hero";
 import ToolsSection from "@/components/ToolsSection";
 import About from "@/components/About";
@@ -19,6 +20,7 @@ const Index = () => {
       <FloatingSocialIcons />
       
       <SystemHud />
+      <SystemQuestPopup />
       <main>
         <Hero />
         <About />
