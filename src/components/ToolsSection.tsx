@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { spotlightMove, spotlightLeave } from "@/lib/spotlight";
 import { ExternalLink, Terminal, ShieldAlert, Search, Sparkles, Database } from "lucide-react";
 
 const tools = [

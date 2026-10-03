@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { spotlightMove, spotlightLeave } from "@/lib/spotlight";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { motion } from "framer-motion";
 import { Trophy, ExternalLink, TrendingUp, Wrench, Target } from "lucide-react";
 import {
